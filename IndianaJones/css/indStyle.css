@@ -1,0 +1,36 @@
+
+.background {
+	background-image: url(../pictures/heat.jpg);
+	background-color: black;
+	color: white;
+}
+
+.current {
+	color: grey;
+}
+
+body {
+	background-color: black;
+}
+/*как-то сделать статичную картинку бакграунда*/
+nav, footer {
+    clear: both;
+    color: white;
+    background-color: black;
+    min-height: 70px;
+    font-family: Georgia, times, serif;
+    line-height: 1.7em;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 5px 0px 5px 30px;
+}
+
+nav li {
+	display: inline;
+	margin-right: 40px;
+}
+nav li a {
+	color: white;
+}
