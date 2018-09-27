@@ -1,14 +1,32 @@
-
+@import url(grid.css);
+@import url(autorizStl.css);
 .background {
 	background-image: url(../pictures/heat.jpg);
 	background-color: black;
 	color: white;
+	margin-top: 10em;
 }
 
 .current {
 	color: orange;
 }
 
+nav {
+    position: fixed;
+    top: 0px;
+    right: 5px;
+    left: 5px;
+}
+
+.submenu {
+	display: none;
+}
+nav ul li:hover .submenu {
+	display: block;
+}
+#smoke {
+	background-color: rgba(158, 158, 158, 0.3);
+}
 body {
 	background-color: black;
 }
@@ -31,6 +49,12 @@ nav li {
 	display: inline;
 	margin-right: 40px;
 }
+
+nav ul li ul li {
+	float: none;
+	width: 100%
+}
 nav li a {
 	color: white;
 }
+
