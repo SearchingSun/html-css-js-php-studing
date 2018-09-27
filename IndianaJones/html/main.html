@@ -9,12 +9,12 @@
 </head>
 <body>
 	<header>
-		<nav>
-		<ul>
+		<nav class="pos-size fixed">
+		<ul class="col-12">
 			<li><a href="#"><img src="https://fontmeme.com/permalink/180924/39f404162034ace4d3a6b24023922ee9.png" alt="indiana-jones-font" border="0" height="59px"></a></li>
 			<li><a href="#" class="current">Главная</a></li>
             <li><a href="films.html">Фильмы о Индиане</a></li>
-            <ul>
+            <ul class="submenu">
                 <li><a href="hram.html">Индиана Джонс и храм судьбы</a></li>
                 <li><a href="#">Индиана Джонс: В поисках утраченного ковчега</a></li>
                 <li><a href="#">Индиана Джонс и последний крестовый поход</a></li>
@@ -25,23 +25,91 @@
             <li><a href="#">Комиксы</a></li>
             <li><a href="#">Книги</a></li>
             <li><a href="#">О нас</a></li>
-            <li><a href="registr.html">Зарегистрироваться</a>|<a href="autoriz.html">Войти</a></li>
+            <li><a href="#openModal">Зарегистрироваться</a>|<a href="#openModal2">Войти</a></li>
         </ul>
         </nav>
 	</header>
 	<div class="background">
-		<p>
-			
+		<div id="smoke" class="offset-2 col-8">
+		<div>
+		<p><a href="test.html">Тест"Кто ты?"</a>
+		<br>
+			До́ктор Ге́нри Уо́лтон «Индиа́на» Джонс-мла́дший (англ. Dr. Henry «Indiana» Jones, Jr.) — вымышленный персонаж, герой серии приключенческих фильмов, многочисленных книг, комиксов и компьютерных игр. Персонаж, первоначально носивший имя Индиана Смит, был придуман режиссёром и сценаристом Джорджем Лукасом в 1973 году[1]. В последующей разработке героя, для первого фильма серии об Индиане Джонсе, который назывался «В поисках утраченного ковчега»[1], ему помогали Филип Кауфман, Лоуренс Кэздан а также Стивен Спилберг, который стал режиссёром всех фильмов серии[1]. 
 		</p>
-		<p><a href="test.html">Тест"Кто ты?"</a></li>
-			До́ктор Ге́нри Уо́лтон «Индиа́на» Джонс-мла́дший (англ. Dr. Henry «Indiana» Jones, Jr.) — вымышленный персонаж, герой серии приключенческих фильмов, <br>многочисленных книг, комиксов и компьютерных игр. Персонаж, первоначально носивший имя Индиана Смит, был придуман режиссёром и сценаристом Джорджем <br>Лукасом в 1973 году[1]. В последующей разработке героя, для первого фильма серии об Индиане Джонсе, который назывался «В поисках утраченного <br>ковчега»[1], ему помогали Филип Кауфман, Лоуренс Кэздан а также Стивен Спилберг, который стал режиссёром всех фильмов серии[1]. 
+        </div>
+        <div class="col-8"><p>
+            В фильмах роль Индианы исполнил в основном американский актёр Харрисон Форд, однако его играли и другие актёры — Ривер Феникс играл молодого Инди в фильме «Индиана Джонс и последний крестовый поход», а Кори Кэрриер, Шон Патрик Флэнери и Джордж Холл (англ.)русск. исполнили роль в телесериале «Хроники молодого Индианы Джонса».
 		</p>
-        <p>
-            В фильмах роль Индианы исполнил в основном американский актёр Харрисон Форд, однако его играли и другие актёры — Ривер Феникс играл молодого Инди в фильме <br>«Индиана Джонс и последний крестовый поход», а Кори Кэрриер, Шон Патрик Флэнери и Джордж Холл (англ.)русск. исполнили роль в телесериале «Хроники молодого <br>Индианы Джонса».
-		</p>
-		<p>Прочее заполнение ещё каким-то текстом.<br>
+		</div>
+		<div class="col-4">
+		<p>Прочее заполнение ещё каким-то текстом </p>
+		</div>
+		</div>
 			<br>
-			<br>
+			<!-- Модальное всплывающее окно на регистарцию -->
+	<div class="container">
+    </div>
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Регистрация</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                <fieldset>
+                <legend>Регистарция нового участника</legend>
+                <div>
+                    <label for="text">Логин</label>
+                    <input id="text" required type="text" >
+                </div>
+                <div>
+                    <label for="email">Введите email</label>
+                    <input id="email" required type="email">
+                </div>
+                <div>
+                    <label for="pwd">Пароль</label>
+                    <input id="pwd" required type="password">
+                </div>
+                <div>
+                    <label for="pwd">Подтвердите пароль</label>
+                    <input id="pwd" required type="password">
+                    <br>
+                    <input type="submit" value="Отправить">
+                </div>
+            </fieldset>
+                </div>
+            </div>
+        </div>
+</div>
+<!-- Модальное всплывающее окно на авторизацию -->
+<div class="container">
+    </div>
+    <div id="openModal2" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Вход</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                <fieldset>
+                <legend>Вход</legend>
+                <div>
+                    <label for="text">Логин</label>
+                    <input id="text" required type="text" >
+                </div>
+                <div>
+                    <label for="pwd">Пароль</label>
+                    <input id="pwd" required type="password">
+                    <br>
+                    <input type="submit" value="Отправить">
+                </div>                
+            </fieldset>
+                </div>
+            </div>
+        </div>
+</div>
 			<br>
 			<br>
 			<br>
