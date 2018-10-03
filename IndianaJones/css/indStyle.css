@@ -1,14 +1,20 @@
 @import url(grid.css);
 @import url(autorizStl.css);
 .background {
+	background-size: 100% ;
 	background-image: url(../pictures/heat.jpg);
 	background-color: black;
 	color: white;
 	margin-top: 10em;
+	background-repeat: no-repeat;
 }
 
 .current {
 	color: orange;
+}
+
+.flex {
+	display: flex;
 }
 
 nav {
@@ -17,7 +23,9 @@ nav {
     right: 5px;
     left: 5px;
 }
-
+legend {
+	padding: 5px
+}
 .submenu {
 	display: none;
 }
@@ -25,7 +33,15 @@ nav ul li:hover .submenu {
 	display: block;
 }
 #smoke {
-	background-color: rgba(158, 158, 158, 0.3);
+	background-color: rgba(54, 54, 54, 0.8);
+	padding: 2em;
+	font-size: 20px;
+	border: 2px solid black;
+	border-top-left-radius: 3em 2em;
+	border-top-right-radius: 3em 2em;
+	border-bottom-right-radius: 3em 2em;
+	border-bottom-left-radius: 3em 2em;
+
 }
 body {
 	background-color: black;
@@ -58,3 +74,44 @@ nav li a {
 	color: white;
 }
 
+p {
+	text-indent: 3em;
+}
+
+.container {
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 5em;
+    display: flex;
+    color: white;
+    flex-direction:  column;
+}
+.flex-container {
+	display: flex;
+}
+.border {
+    box-sizing: border-box;
+    padding: 1em;
+}
+.border-2 {
+	border: 1px solid white;
+	box-sizing: border-box;
+	padding: 10px
+}
+.border-3 {
+    box-sizing: border-box;
+    padding: 1em;
+}
+.row-container {
+	display: flex;
+}
+
+.flex-1 {
+	flex:1 ;
+}
+.film-img {
+	height: 300px;
+	padding-right: 15px;
+	padding-left:15px;
+}
