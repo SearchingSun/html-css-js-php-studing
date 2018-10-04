@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<link rel="stylesheet" type="text/css" href="../css/indStyle.css">
-	<title>Тест Индианы</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/indStyle.css">
+    <title>Индиана Джонс</title>
 </head>
 <body>
 	<header>
-		<nav>
-		<ul>
-            <li><a href="main.html"><img src="https://fontmeme.com/permalink/180924/39f404162034ace4d3a6b24023922ee9.png" alt="indiana-jones-font" border="0" height="59px"></a></li>
-			<li><a href="main.html" >Главная</a></li>
-            <li><a href="films.html" >Фильмы о Индиане</a></li>
-            <ul>
-                <li><a href="hram.html">Индиана Джонс и храм судьбы</a></li>
-                <li><a href="#">Индиана Джонс: В поисках утраченного ковчега</a></li>
-                <li><a href="#">Индиана Джонс и последний крестовый поход</a></li>
-                <li><a href="#">Индиана Джонс и Королевство хрустального черепа</a></li>
-            </ul>
-            <li><a href="#">Телесериал</a></li>
-            <li><a href="#">Игры</a></li>
-            <li><a href="#">Комиксы</a></li>
-            <li><a href="#">Книги</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="registr.html">Зарегистрироваться</a>|<a href="#">Войти</a></li>
-        </ul>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: orange">
+          <a class="navbar-brand" href="main.html"><img class="img" src="https://fontmeme.com/permalink/181003/5f59850a5daeb01dc82adb3b2756483e.png" alt="indiana-jones-font" border="0""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="main.html">Главная <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="films.html">Кинематограф</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="serial.html">Сериал</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Литература
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="books.html">Книги</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="comics.html">Комиксы</a>
+                </div>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="games.html">Игры</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Тест</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#openModal">Авторизация</a>
+                  </li>
+                  </li>
+                </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+            </form>
+          </div>
         </nav>
-	</header>
+    </header>
 	<div class="background">
         <form action="#" method="post">
             <fieldset>
