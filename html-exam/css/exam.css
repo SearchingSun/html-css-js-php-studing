@@ -1,0 +1,42 @@
+
+
+
+body {
+	display: flex;
+	justify-content: center;
+}
+.flex-container {
+	display: flex;
+	padding: 50px 48px 0px 48px;
+	max-width: 992px;
+}
+
+.border {
+	border: 2px solid black;
+}
+
+.logo {
+	margin-right: 40px;
+}
+.flex-1 {
+	display: flex;
+	flex: 0.18;
+	flex-direction: column;
+}
+
+.flex-6 {
+	display: flex;
+	flex: 0.79;
+}
+.flex {
+	display: flex;
+}
+.slider {
+	display: flex;
+}
+.slides {
+	width: 712px;
+}
+.sl {
+	width: 100%;
+}
