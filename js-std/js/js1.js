@@ -29,5 +29,5 @@ console.log("Площадь овального кольца = " + i + " cм^2");
 let X, Y;
 X = 15;
 Y = 9;
-X>Y? Y=X, X=Y ;
-console.log( X, Y );
+//X>Y? Y=X, X=Y ;
+//console.log( X, Y );
