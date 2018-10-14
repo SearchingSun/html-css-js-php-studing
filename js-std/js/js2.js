@@ -27,8 +27,13 @@ if (mNum === 0 || mNum === 1 || mNum === 11) {
 
 //Задача 3
 console.log ("Задача №3");
-int[][] tabl;
-tabl = new int [11][11];
+int[][] a = {
+      {1, 2, 3}, 
+      {4, 5, 6, 9}, 
+      {7}, 
+};
+
+int[][] a = new int[3][4];
 
 
 for (int i = 0; i < 2; i++) {
