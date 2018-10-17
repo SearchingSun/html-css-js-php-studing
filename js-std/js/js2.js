@@ -1,16 +1,18 @@
+'use strict';
 //Задача 1 
 console.log ("Задача №1");
 let a, b, c, x1=0 , x2=-4 , x3=0 , y1=0 , y2=0 , y3=-3 ;
-a = Math.sqrt(Math.pow((Math.abs(x1-x2)),2)+Math.pow((Math.abs(y1-y2)),2));
-b = Math.sqrt(Math.pow((Math.abs(x3-x2)),2)+Math.pow((Math.abs(y3-y2)),2));
-c = Math.sqrt(Math.pow((Math.abs(x1-x3)),2)+Math.pow((Math.abs(y1-y3)),2));
-if ( Math.pow(a , 2) === Math.pow(b , 2) + Math.pow(c , 2) ||
-	 Math.pow(b , 2) === Math.pow(a , 2) + Math.pow(c , 2) ||
-	 Math.pow(c , 2) === Math.pow(b , 2) + Math.pow(a , 2) ) {
+a = (Math.pow((Math.abs(x1-x2)),2)+Math.pow((Math.abs(y1-y2)),2));
+b = (Math.pow((Math.abs(x3-x2)),2)+Math.pow((Math.abs(y3-y2)),2));
+c = (Math.pow((Math.abs(x1-x3)),2)+Math.pow((Math.abs(y1-y3)),2));
+if  (a  === b  + c  ||
+	 b  === a  + c  ||
+	 c  === b  + a  ) {
 	console.log("Данный треугольник прямоугольный")
 } else console.log("Данный треугольник не прямоугольный")
 
 //Задача 2
+console.log ("   ");
 console.log ("Задача №2");
 let mNum = new Date().getMonth();
 if (mNum === 0 || mNum === 1 || mNum === 11) {
@@ -26,12 +28,13 @@ if (mNum === 0 || mNum === 1 || mNum === 11) {
 }
 
 //Задача 3
+console.log ("   ");
 console.log ("Задача №3");
-var table = new Array(10);		
-for(var i = 0; i < table.length; i++)
+let table = new Array(10);		
+for(let i = 0; i < table.length; i++)
 	table[i] = new Array(10);	
-for(var row = 0, str = ''; row < table.length; row++) {
-	for(var col = 0; col < table[row].length; col++) {
+for(let row = 0, str = ''; row < table.length; row++) {
+	for(let col = 0; col < table[row].length; col++) {
 		table[row][col] = (row+1)*(col+1);
 		str += table[row][col] + '  ';
 	}
@@ -41,6 +44,7 @@ for(var row = 0, str = ''; row < table.length; row++) {
 
 
 //Задача 4
+console.log ("   ");
 console.log ("Задача №4");
 let k;
 let babl = [8, 46, -9, 1772, 14, 76, 15, -167];
@@ -55,43 +59,107 @@ for (let i = babl.length; i > 0 ; i--) {
 }
 console.log (babl);
 
-/*
 //Задача 5 
-Создать таблицу соответствия между весом в фунтах и весом в килограммах для значений от 1 до 10.
-*/
+console.log ("   ");
+console.log ("Задача №5");
+let funts = new Array(10);		
+for(let i = 0; i < funts.length; i++)
+	funts[i] = new Array(2);	
+for(let row = 0, str = ''; row < funts.length; row++) {
+	for(let col = 0; col < funts[row].length; col++) {
+		funts[row][0] = (row+1)*(col+1);
+		funts[row][1] = (row+1)*(2.2);
+		str += funts[row][col] + '  ';
+
+	}
+	console.log(str + '\n');
+	str = '';
+}
 
 //Задача 6
+console.log ("   ");
 console.log ("Задача №6");
-let tarelki = 3; let milo = 1
-do {
-    console.log("tarelki = ", tarelki, "milo = ", milo);
-    tarelki--;
-    milo = milo-0.5;
-} while (tarelki != -1), (milo != 0.5);
-
-
+let tarelki = 5; 
+let milo = 3;
+if (tarelki || milo <= 0) {
+console.log ("Кажется нам чего-то недозавезли ﴾͡๏̯͡๏﴿ O’RLY?")
+}
+while (tarelki && milo > 0) {
+	console.log ("На начало пенной вечеринки в наличии " + tarelki + " единиц(и/а) тарелок(и/а) и " + milo + " единиц мыла");
+	while (tarelki && milo > 0){
+	tarelki = tarelki-1;
+	milo = milo-0.5;
+	console.log ("Тарелка вымыта, осталось мыла " + milo);
+	if (tarelki + milo === 0) {
+		console.log ("Все трюмы пусты");
+	}else if (milo === 0) {
+		console.log ("Упс, мыло кончилось, ещё осталось " + tarelki + " Тарелок(и/а)");
+	}else if (tarelki === 0) {
+		console.log ("Все тарелки вымыты, осталось "+ milo +" единиц мыла ");
+	}
+}
+}
 
 //Задача 7
+console.log ("   ");
 console.log ("Задача №7");
-
-
+//OMG WhY ?!!! Закомментирую-ка я это нафиг 
 /*
-Задача 6* 
-Задать количество тарелок и количество моющего средства. 
-Моющее средство расходуется из расчета 0,5 на одну тарелку. 
-В цикле выводить сколько моющего средства осталось после мытья каждой тарелки 
-В конце вывести, сколько тарелок осталось, когда моющее средство закончилось или наоборот. 
+let pz;
+for (pz = 1000; pz < 9999; ){
+	console.log(pz)
+	pz = pz + 3;
+}
+*/
 
-Задача 7 
-Создайте программу, выводящую на экран все четырехзначные числа последовательности 1000 1003 1006 1009 1012 1015. 
+//Задача 8
+console.log ("   ");
+console.log ("Задача №8");
+let zd = 95;
+for (; zd >= 0 ; ) {
+	console.log(zd);
+	zd = zd-5;
+}
 
-Задача 8* 
-Создайте программу, выводящую на экран все неотрицательные элементы последовательности 90 85 80 75 70 65 60. 
+//Задача 9
+console.log ("   ");
+console.log ("Задача №9");
+let z = 2
+for ( let i = 0 ; i < 20 ; i++) {
+	let k = 2;
+	console.log(z);
+	z = z*k;
+}
 
+//Задача 10
+console.log ("   ");
+console.log ("Задача №10");
+let a1 = 0, a2 = 0, a3 = 0, b1 = 0, b2 = 0, b3 = 1;
+for (; a1 + a2 + a3 != 27;){
+	for(var i = 0; a1 + a2 + a3 === b1 + b2 + b3; i++){
+		b3 = b3 +1;
+		if (b3 === 10){
+			b2 = b2+1;
+			b3 = 0;
+		}else if (b2 === 10){
+			b1 = b1+1;
+			b2 = 0;
+		}else if (b1 === 10){
+			a3 = a3+1;
+			b1 = 0;
+		}else if (a3 === 10){
+			a2 = a2+1;
+			a3 = 0;
+		}else if (a2 === 10){
+			a1 = a1+1;
+			a2 = 0;
+console.log(i)		}
+console.log(i)	}
 
-Задача 9* 
-Создайте программу, выводящую на экран первые 20 элементов последовательности 2 4 8 16 32 64 128. 
+console.log(i)}
 
+console.log(i)
+/*
 Задача 10 
 В городе N проезд в трамвае осуществляется по бумажным отрывным билетам. 
 Каждую неделю трамвайное депо заказывает в местной типографии рулон билетов с номерами от 000001 до 999999. 
