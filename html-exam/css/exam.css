@@ -1,42 +1,485 @@
-
-
-
 body {
 	display: flex;
 	justify-content: center;
+	background-color: white;
+	font-family: "ff-tisa-web-pro"; font-style: normal;
+}
+.italic {
+	font-family: "ff-tisa-web-pro"; font-style: italic;
 }
 .flex-container {
 	display: flex;
 	padding: 50px 48px 0px 48px;
-	max-width: 992px;
+	max-width: 898px;
+	flex-direction: column;
 }
-
-.border {
-	border: 2px solid black;
+.mainFlex{
+	display: flex;
 }
-
+ul{
+	padding-left: 0px;
+}
+ul.menu li{
+	display: inline-block;
+	margin-bottom: 18px;
+}
+.menu {
+	margin-right: 25px;
+}
 .logo {
 	margin-right: 40px;
+	transition: 1s;
+	display: flex;
+}
+.logo:hover {
+	opacity: 0.85;
+
 }
 .flex-1 {
 	display: flex;
-	flex: 0.18;
+	flex: 0.14;
 	flex-direction: column;
 }
 
 .flex-6 {
 	display: flex;
-	flex: 0.79;
+	flex: 0.736;
+	flex-direction: column;
+
 }
 .flex {
 	display: flex;
 }
 .slider {
 	display: flex;
+	flex-direction: column;
 }
 .slides {
-	width: 712px;
+width: 712px;
+height: 416px;
 }
-.sl {
+.text11{
+	position: absolute;
+	top:240px;
+	right: 0px;
+	background: white;
+	color: black;
+	transition: 1s;
+}
+.text11:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.text12{
+	position: absolute;
+	top:299px;
+	right: 0px;
+	background: black;
+	color: white;
+	margin:0, 10px, 0px, 10px;
+	transition: 1s;
+}
+.text12:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.text13{
+	position: absolute;
+	top:240px;
+	right: 537px;
+	background: white;
+	color: black;
+	transition: 1s;
+}
+.text13:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.text14{
+	position: absolute;
+	top:299px;
+	right: 235px;
+	background: black;
+	color: white;
+	margin:0, 10px, 0px, 10px;
+	transition: 1s;
+}
+.text14:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.text15{
+	position: absolute;
+	top:240px;
+	right: 556px;
+	background: white;
+	color: black;
+	transition: 1s;
+}
+.text15:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.text16{
+	position: absolute;
+	top:299px;
+	right: 323px;
+	background: black;
+	color: white;
+	margin:0, 10px, 0px, 10px;
+	transition: 1s;
+}
+.text16:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+#s1,#s2,#s3,#s4 {
 	width: 100%;
+	height: auto;
+}
+#s1{
+	position: relative;
+	z-index: 5;
+}
+#s2{
+	position: relative;
+	z-index: 4;
+	bottom:420px;
+}
+#s3{
+	position: relative;
+	z-index: 3;
+	bottom:840px;
+}
+#s4{
+	position: relative;
+	z-index: 2;
+	bottom:1260px;
+}
+.nav {
+	display: flex;
+	height: 35px;
+}
+#nav1,#nav2,#nav3,#nav4 {
+	flex: 1;
+	align-content: center;
+	background: rgba(114, 176, 154, 0.15);
+	padding: 8px;
+	background-image: url(pictures/slider/1.1.jpg);
+}
+#s1:target{
+	z-index: 5;
+}
+#s2:target{
+	z-index: 6;
+}
+#s3:target{
+	z-index: 7;
+}
+#s4:target{
+	z-index: 8;
+}
+.borderRight{
+	border-right: 1px solid #E5E5E5
+}
+.pusto {
+	display: flex;
+	height: 35px;
+}
+.milo {
+	display: flex;
+	border-top: 1px dashed #E5E5E5 ;
+	border-bottom: 1px dashed #E5E5E5;
+
+	margin-bottom: 29px;
+}
+.flex-2{
+flex:2;
+}
+.flex-3{
+flex:3;
+}
+.news {
+	display: flex;
+	margin-bottom: 18px;
+}
+.newsMargin1 {
+	flex-direction: column;
+	flex:1;
+	margin-right: 24px;
+	margin-bottom: 25px;
+}
+.news1 {
+	display: flex;
+}
+.newsMargin2 {
+	flex-direction: column;
+	flex:1;
+	margin-bottom: 25px;
+}
+.footer {
+	display: flex;
+	border-top: 2px solid #E5E5E5;
+	justify-content: flex-end;
+	padding:10px;
+}
+.social {
+	flex-direction: column;
+}
+.menuImg {
+	margin-right: 13px;
+	position: relative;
+	top: 10px;
+	transition-duration: 1s;   /*transition:  никак не работает в этом месте*/
+}
+.AmenuImg:hover .menuImg {
+	left: 10px;
+	transition-duration: 1s;   /*transition:  никак не работает в этом месте*/
+}
+
+.twit{
+	border-bottom: 1px dashed #E5E5E5;
+	margin-bottom: -15px
+	padding:5px;
+}
+.button {
+    display: block;
+    padding: 2px 5px 5px 5px;
+    background: #FFF;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 1px 1px 2px #F5F5F5;
+    transition: all .2s ease;
+}
+.button:hover {
+	background: rgba(114, 176, 154, 0.15);
+}
+.faceImg {
+	position: relative;
+	top: 5px;
+	margin-right: 5px;
+}
+.postImg {
+	margin-right: 13px;
+	float: left;
+}
+.textmargin{
+margin: 4px 4px 4px 60px;
+}
+.postImg {
+	text-align: right;
+	position: relative;
+	top: 5px;
+	left: 10px;
+}
+img.niz {
+	width: 139px;
+	border: 1px solid #E5E5E5;
+	padding: 9px;
+}
+a {
+	text-decoration: none;
+	color: #34AC98;
+}
+a:hover {
+	color: #EC6635;
+}
+.email {
+	margin-top: 11px;
+}
+.subscribe{
+	margin-left: 10px;
+
+}
+.meta{
+	color: #AAA
+}
+.foot {
+	display: inline-block;
+	font-size: 0.8em;
+	color: #AAA;
+	position: relative;
+	right: 557px;
+}
+.rss {
+	width: 32px;
+	height: 32px;
+	opacity: 0.4;
+	transition: 1s;
+}
+.rss:hover {
+	opacity: 1;
+}
+.shiza {
+	padding: 5px;
+}
+
+
+@media screen and (max-width: 990px){
+	.mainFlex {
+		flex-direction: column;
+	}
+	.social {
+		display: none;
+	}
+	.flex-container {
+	max-width: 712px;
+	}
+	.foot {
+		right: 372px;
+	}
+	.menu{
+		flex-direction: row;
+		margin-right: 0px;
+	}
+	.AmenuImg{
+		flex-direction: column;
+		position: relative;
+		top: 20px;
+	}
+	.logo {
+		margin-bottom: 20px;
+	}
+	.i1, .i2, .i3, .i4, .i5 {
+		position: relative;
+		top: -30px;
+	}
+	.i1{
+		right: -70px;
+	}
+		.i2{
+		right: -45px;
+	}
+		.i3{
+		right: -65px;
+	}
+		.i4{
+		right: -60px;   /*Тут hover никак не спасает. иконки всёравно прыгают в место, откуда я их сдвигал*/
+	}
+		.i5{
+		right: -50px;
+	}
+
+}
+@media screen and (max-width: 768px){
+	.flex-container {
+	max-width: 480px;
+	}
+	.menuImg{
+		display: none;
+	}
+	.slider{
+	width: 480px;
+	height: 320px;		
+	}
+	.img1, .img2, .img3, .img4 {
+	width: 480px;
+	height: auto;
+	}
+	#nav1,#nav2,#nav3,#nav4 {
+	background-color: white;
+	}
+	#s1{
+	}
+	#s2{
+		bottom:284px;
+	}
+	#s3{
+		bottom:568px;
+	}
+	#s4{
+		bottom:852px;
+	}
+	.text11, .text12, .text13, .text14, .text15, .text16  {
+		display: none;
+	}
+	.nav{
+		display: none;
+	}
+	.milo {
+		flex-direction: column;
+	}
+	#email {
+		width: 300px;
+	}
+	.flex-2{
+		margin-bottom: 15px;
+	}
+	.AmenuImg {
+		top: 35px;
+		font-size: 0.9em;
+	}
+	.foot {
+	right: 140px;
+	}
+	.news {
+		flex-direction: column;
+	}
+	.niz{
+		width: 190px; /*Каким-то раком изменение высоты работает, а ширины нет... Так что картинки будут убого подрастянуты*/
+		height: 130px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.flex-container {
+	max-width: 320px;
+	}
+		.foot {
+	right: 30px;
+	font-size: 0.6em;
+	}
+	.news1{
+		flex-direction: column;
+	}
+	.niz{
+		width: 300px; /*Каким-то раком изменение высоты работает, а ширины нет... Так что картинки будут убого подрастянуты*/
+		height: 130px;
+	}
+	#email {
+		width: 150px;
+		margin-left: 10px;
+	}
+	.flex-1{
+		flex-direction: column;
+		border-bottom: 2px solid #E5E5E5;
+	}
+	.slider{
+	width: 320px;
+	height: 210px;		
+	}
+	.img1, .img2, .img3, .img4 {
+	width: 320px;
+	height: auto;
+	}
+	#s1{
+	}
+	#s2{
+		bottom:191px;
+	}
+	#s3{
+		bottom:382px;
+	}
+	#s4{
+		bottom:573px;
+	}
+	.logo{
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0px;
+		position: relative;
+		top: 160px;
+	}
+	.menu{
+		margin: 0px;
+		position: relative;
+		top: -130px;
+	}
+	ul li {
+		position: relative;
+		top: 100px;
+	}
+	.flex-container {
+		padding-top: 0px;
+	}
 }

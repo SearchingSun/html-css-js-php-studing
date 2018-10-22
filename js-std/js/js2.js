@@ -153,12 +153,10 @@ for (; a1 + a2 + a3 != 27;){
 		}else if (a2 === 10){
 			a1 = a1+1;
 			a2 = 0;
-console.log(i)		}
-console.log(i)	}
-
+		}
+	console.log(i)}
 console.log(i)}
 
-console.log(i)
 /*
 Задача 10 
 В городе N проезд в трамвае осуществляется по бумажным отрывным билетам. 

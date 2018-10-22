@@ -32,22 +32,27 @@ console.log("Задача №3")
 //Задача №4
 console.log(" ")
 console.log("Задача №4")
-function summ(n,m) {
-    for (var i = 0; n <= m; ) {
+//Рекурсия
+let i = 0;
+let n = 4;
+let m = 6;
+function summ(n,m, i) {
+    for (; n <= m; ) {
     	i += n;
     	n += 1;
     }
-    console.log("Сумма от m до n = " + i)
+  return (n,m,i);
 }
-summ(4, 6);
+console.log("сумма от "+n+ " до " +m+ " равна " +summ(n, m, i));
 
+//Цикл
 let z = 4 , x = 6, d = 0, k;
 k=z;
 for (let i = 0 ; i <= Math.abs(z-x) ; i++ ){
 	d = d+k;
 	k = k+1;
 }
-console.log("Сумма от m до n = "+ d)
+console.log("Сумма от " +n+ " до " + m + " равна "+ d)
 //Задача №5
 console.log(" ")
 console.log("Задача №5")
