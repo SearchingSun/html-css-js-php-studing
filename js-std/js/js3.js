@@ -63,13 +63,12 @@ console.log(newArray);
 console.log(" ")
 console.log("Задача №4")
 let n = 1, m = 10;
-//Рекурсия AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-//            H      E     L      P
-function summ(n,m) {
-    if (n<m) {
-    n++
-    return n += summ(n,m);
-    }
+//Рекурсия
+function summ(n, m) {
+if (n==m) {
+return m;
+}
+return n+summ(n+1, m);
 }
 console.log("сумма от "+n+ " до " +m+ " равна " +summ(n, m));
 
@@ -90,4 +89,16 @@ function plus(a,b){
     return a+b;
 }
 let plusDva = plus.bind(null, 2)
-console.log(plusDva(3))
+let p = 7;
+console.log(plusDva(p))
+
+// Доп функции. Факториал.
+console.log(" ")
+console.log("Доп")
+function factorial(l) {
+    if(l==1) {
+    return 1;
+    }
+return l*factorial(l-1);
+}
+console.log(factorial(5))
