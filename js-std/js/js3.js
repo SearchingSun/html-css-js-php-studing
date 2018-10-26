@@ -1,18 +1,18 @@
 'use strict';
 //Задача №1
 console.log("Задача №1")
-let days = 2 ;
-if (days === 0 || days > 4){
+let days = 24 ;
+if (days === 0 || 5<= days && days % 10 != 1 && days % 10 != 2 && days % 10 != 3 && days % 10 != 4){
     function dayZ() {
         console.log(days + " Дней");
     }
     dayZ();
-}else if (days === 1 ){
+}else if (days % 10 === 1 && days != 11){
     function dayZ() {
         console.log(days + " День");
     }
     dayZ();
-}else if (days === 2 || days === 3 || days === 4){
+}else if ( 2 <= days <= 4 || days % 10 === 2 || days % 10 === 3 || ays % 10 === 4){
     function dayZ() {
         console.log(days + " Дня");
     }
@@ -22,46 +22,72 @@ if (days === 0 || days > 4){
 //Задача №2
 console.log(" ")
 console.log("Задача №2")
-
-//как обработать каждый элемент массива переданной функцией (fn), возвращая новый массив. 
+let arr = [1, 3, 4, 5, 7, 9];
+function square(x){
+    return x*x
+}
+function obrabotkaArr(func, array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] = func(array[i]);
+    }
+    return array;
+}
+console.log(obrabotkaArr(square, arr));
 
 //Задача №3
+// Задача 3 
+// Написать функцию клонирующую (создающую копию) массива. 
 console.log(" ")
 console.log("Задача №3")
+let arro = [2, 4, 8];
+function retX(x){
+    return x = x
+}
+function clon (y,x) { 
+    var newArray = new Array(y.length);
+    for(let i=0; i < y.length; i++ ){
+        newArray[i] = x(y[i]);
+   }
+    return newArray;
+};
+console.log(clon(arro, retX))
+let newArray = clon(arro, retX)
+console.log("А теперь проверка того, что это 2 независимых массива")
+newArray[0] = 100;
+arro[0] = 0;
+console.log(arro);
+console.log(newArray);
+
 
 //Задача №4
 console.log(" ")
 console.log("Задача №4")
-//Рекурсия
-let i = 0;
-let n = 4;
-let m = 6;
-function summ(n,m, i) {
-    for (; n <= m; ) {
-    	i += n;
-    	n += 1;
+let n = 1, m = 10;
+//Рекурсия AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+//            H      E     L      P
+function summ(n,m) {
+    if (n<m) {
+    n++
+    return n += summ(n,m);
     }
-  return (n,m,i);
 }
-console.log("сумма от "+n+ " до " +m+ " равна " +summ(n, m, i));
+console.log("сумма от "+n+ " до " +m+ " равна " +summ(n, m));
 
 //Цикл
-let z = 4 , x = 6, d = 0, k;
-k=z;
-for (let i = 0 ; i <= Math.abs(z-x) ; i++ ){
+let d = 0, k;
+k=n;
+for (let i = 0 ; i <= Math.abs(n-m) ; i++ ){
 	d = d+k;
 	k = k+1;
 }
 console.log("Сумма от " +n+ " до " + m + " равна "+ d)
+
+
 //Задача №5
 console.log(" ")
 console.log("Задача №5")
-/*
-Задача 3 
-Написать функцию клонирующую (создающую копию) массива. 
-
-Задача 5 
-Написать функцию, которая возвращает новую функцию, 
-которая увеличивает/уменьшает переданное число на указанный при карировании шаг (задача на замыкание). 
-Карирование в javascript - прием, позволяющий преобразовать функцию так, на выходе образуется функция, обладающая возможностью частичного применения...
-*/
+function plus(a,b){
+    return a+b;
+}
+let plusDva = plus.bind(null, 2)
+console.log(plusDva(3))
