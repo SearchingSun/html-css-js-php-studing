@@ -135,9 +135,8 @@ for ( let i = 0 ; i < 20 ; i++) {
 console.log ("   ");
 console.log ("Задача №10");
 let a1 = 0, a2 = 0, a3 = 0, b1 = 0, b2 = 0, b3 = 1;
-for (; a1 + a2 + a3 != 27;){
-	for(var i = 0; a1 + a2 + a3 === b1 + b2 + b3; i++){
-		b3 = b3 +1;
+let check = 0;
+for (;;){
 		if (b3 === 10){
 			b2 = b2+1;
 			b3 = 0;
@@ -153,10 +152,18 @@ for (; a1 + a2 + a3 != 27;){
 		}else if (a2 === 10){
 			a1 = a1+1;
 			a2 = 0;
+		}else if(a1 === 10){
+			break
+		}else if (a1 + a2 + a3 != b1 + b2 + b3){
+		b3 = b3 +1;
+		}else if(a1 + a2 + a3 === b1 + b2 + b3){
+		check = check + 1;
+		b3 = b3 +1;
 		}
-	console.log(i)}
-console.log(i)}
+}
 
+console.log(check)
+console.log(a1,a2,a3,b1,b2,b3)
 /*
 Задача 10 
 В городе N проезд в трамвае осуществляется по бумажным отрывным билетам. 
