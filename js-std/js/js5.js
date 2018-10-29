@@ -66,28 +66,22 @@ function createUserArr() {
 }
 let arr = createUserArr()
 let table = document.getElementById("table");
-let tr =  document.createElement("tr")
-let td1 = document.createElement("td")
-let td2 = document.createElement("td")
-let td3 = document.createElement("td")
-let td4 = document.createElement("td")
-let td5 = document.createElement("td")
+table.innerHTML = "<tr><th>№</th><th>Имя</th><th>Email</th><th>Номер телефона</th><th>Должность</th></tr>";
 function tableCreate() {
 	for (let i = 0; i < arr.length; i++) {
 		let tableContent = arr[i];
-		let td1 = (tableContent.id);
-		let td2 = (tableContent.name);
-		let td3 = (tableContent.email);
-		let td4 = (tableContent.phone);
-		let td5 = (tableContent.position);
-		tr.appendChild(td1);
-		tr.appendChild(td2);
-		tr.appendChild(td3);
-		tr.appendChild(td4);
-		tr.appendChild(td5);
-		table.appendChild(tr);   ??????
-		table.innerHTML = tr;       ??????????
+		let tr =  document.createElement("tr")
+		let td1 = document.createElement("td").setAttribute('id', tableContent.id)
+		let td2 = document.createElement("td").setAttribute('name', tableContent.name)
+		let td3 = document.createElement("td").setAttribute('email', tableContent.email)
+		let td4 = document.createElement("td").setAttribute('phone', tableContent.phone)
+		let td5 = document.createElement("td").setAttribute('position', tableContent.position)
+				console.log(td1)
+				console.log(td1+td2)
+
 	}
 } 
 
 setTimeout ( tableCreate, 1 );
+
+
