@@ -1,7 +1,5 @@
 "use strict"
 
-/*
-
 //Задача №1
 console.log(" ")
 console.log("Задача №1")
@@ -44,7 +42,6 @@ time.innerHTML = content;
 setTimeout ( timeMonitor, 1 );
 setInterval( timeMonitor,1000 );
 
-*/
 
 //Задача №3
 console.log(" ")
@@ -65,23 +62,85 @@ function createUserArr() {
    return arr;
 }
 let arr = createUserArr()
-let table = document.getElementById("table");
+let thead = document.getElementById("table");
 table.innerHTML = "<tr><th>№</th><th>Имя</th><th>Email</th><th>Номер телефона</th><th>Должность</th></tr>";
+let tbody = document.getElementById("table1");
 function tableCreate() {
 	for (let i = 0; i < arr.length; i++) {
 		let tableContent = arr[i];
 		let tr =  document.createElement("tr")
-		let td1 = document.createElement("td").setAttribute('id', tableContent.id)
-		let td2 = document.createElement("td").setAttribute('name', tableContent.name)
-		let td3 = document.createElement("td").setAttribute('email', tableContent.email)
-		let td4 = document.createElement("td").setAttribute('phone', tableContent.phone)
-		let td5 = document.createElement("td").setAttribute('position', tableContent.position)
-				console.log(td1)
-				console.log(td1+td2)
-
+		let td1 = document.createElement("td")//.appendChild(document.createTextNode(tableContent.id))
+		let td2 = document.createElement("td")//.appendChild(document.createTextNode(tableContent.name))
+		let td3 = document.createElement("td")//.appendChild(document.createTextNode(tableContent.email))
+		let td4 = document.createElement("td")//.appendChild(document.createTextNode(tableContent.phone))
+		let td5 = document.createElement("td")//.appendChild(document.createTextNode(tableContent.position))
+		td1.appendChild(document.createTextNode(tableContent.id))
+		td2.appendChild(document.createTextNode(tableContent.name))
+		td3.appendChild(document.createTextNode(tableContent.email))
+		td4.appendChild(document.createTextNode(tableContent.phone))
+		td5.appendChild(document.createTextNode(tableContent.position))
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		tr.appendChild(td4);
+		tr.appendChild(td5);
+		tbody.appendChild(tr);  
 	}
 } 
 
 setTimeout ( tableCreate, 1 );
 
 
+
+
+
+
+
+// Из разобраного на занятии
+
+// function createUserArr() {
+//     let arr = [];
+//     for (let i = 1; i < 100; i++){
+//         arr.push(
+//             {
+//                 id: i,
+//                 name: "Какое-то имя",
+//                 email: "Email",
+//                 phone: "+79991112233",
+//                 position: "Должность",
+//                 date: "12-12-2008"
+//             }
+//         )
+//     }
+//     return arr;
+// }
+
+// let users = createUserArr();
+// generateTable(users);
+
+// function generateTable(data) {
+//     let table = '<table>';
+//     for (let i = 0; i < data.length; i++){
+//         table += '<tr>'; // '<table>''<tr>'
+//         for (let prop in data[i]) {
+//             // console.log(prop);
+//             table += `<td>${data[i][prop]}</td>`; // '<table>''<tr>'`<td>${prop}</td>`
+//         }
+//         table += '</tr>';
+//     }
+//     table += '</table>';
+//     document.getElementById('table1').innerHTML = table;
+// }
+// generateTable(users);
+
+// function generateTable2(data) {
+//     let table = document.getElementById('table2');
+//     for (let i = 0; i < data.length; i++){
+//         let row = table.insertRow();
+//         for (let prop in data[i]) {
+//             row.insertCell().innerHTML = data[i][prop];
+//         }
+//     }
+// }
+
+// generateTable2(users);
