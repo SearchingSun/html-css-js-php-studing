@@ -1,0 +1,23 @@
+.cont {
+	border:2px solid red;
+	display: none;
+}
+tr{
+	cursor: pointer;
+	background: 
+}
+td, th {
+	padding: 7px;
+	border: 1px solid black;
+	background: orange;
+}
+th:hover{
+	cursor: pointer;
+	background: green;  
+}
+td:hover{
+	cursor: default;
+}
+table {
+	border: 5px solid maroon;
+}
