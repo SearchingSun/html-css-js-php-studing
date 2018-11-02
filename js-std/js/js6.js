@@ -55,7 +55,7 @@ function createUserArr() {
 }
 let arr = createUserArr()
 let thead = document.getElementById("table");
-table.innerHTML = "<tr><th>№</th><th>Имя</th><th>Email</th><th>Номер телефона</th><th>Должность</th><th>Зарплата</th></tr>";
+table.innerHTML = "<tr><th data-type='number'>№</th><th data-type='string'>Имя</th><th data-type='string'>Email</th><th data-type='string'>Номер телефона</th><th data-type='string'>Должность</th><th data-type='number'>Зарплата</th></tr>";
 let tbody = document.getElementById("table1");
 function tableCreate() {
 	for (let i = 0; i < arr.length; i++) {
@@ -89,7 +89,31 @@ grid.addEventListener('click', vizov);
 function vizov(point){
 	if(point.target.tagName != 'TH')
 		return;
-	console.log(point)
-}
+	else sortirovkaGrid(point.target.cellIndex, point.target.getAtribute('data-type'));
+};
 
+function sortirovkaGrid(colNum, type){
+	let tbody = grid.getElementByTagName('tbody')[0];
+	let rowsArray = [].slice.call(tbody.rows);
+	let compare;
+
+      switch (type) {
+        case 'number':
+          compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
+          };
+          break;
+        case 'string':
+          compare = function(rowA, rowB) {
+            return rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML;
+          };
+          break;
+      }
+      rowsArray.short(compare);
+      grid.removeChild(tbody);
+      for (var i = 0; i < rowsArray.length; i++) {
+      	tbody.appendChild(rowsArray[i]);
+      }
+      grid.appendChild(tbody);
+}
 
