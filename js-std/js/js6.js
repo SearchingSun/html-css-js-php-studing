@@ -27,7 +27,7 @@ function sendData(event) {
     }
 }
 
-
+/*
 //Задача №3
 function createUserArr() {
    let arr = [];
@@ -116,4 +116,52 @@ function sortirovkaGrid(colNum, type){
       }
       grid.appendChild(tbody);
 }
+*/
 
+//Задача 4
+let cells;
+cells = prompt("Задайте размер игрового поля N x N - введите N", );
+cells = Number.parseInt(cells);
+let mainDiv = document.getElementById("mainDiv");
+let z = 1;
+(function (){
+	let prizes = okrugleniePrizes(cells-1, (cells*cells/2));
+	for (var i = 0; i < cells; i++) {
+		let div = document.createElement("div");
+		mainDiv.appendChild(div);
+		for (var k = 0; k < cells; k++) {
+			let div2 = document.createElement("div");
+			div2.classList.add('div2')
+			div2.id = z
+			z += 1
+			div.appendChild(div2);
+		}
+	}
+}())
+
+let prizes = okrugleniePrizes(1, (cells*cells/2));
+	function okrugleniePrizes (min, max){
+	let o = getRandomArbitrary(min, max)
+   		o = Math.round(o)
+   		return o
+	function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+}
+
+
+for (var i = 0; i < prizes; i++) {
+	let prize = okrugleniePrizes(1, cells*cells)
+	
+	if (prize === )
+}
+
+
+let game = document.getElementById('mainDiv');
+game.addEventListener('click', obrabotka);
+function obrabotka(box){
+	let index = box.target.id
+	index = +index
+	console.log(index)
+	
+}
