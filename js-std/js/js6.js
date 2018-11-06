@@ -27,7 +27,7 @@ function sendData(event) {
     }
 }
 
-/*
+
 //Задача №3
 function createUserArr() {
    let arr = [];
@@ -89,11 +89,11 @@ grid.addEventListener('click', vizov);
 function vizov(point){
 	if(point.target.tagName != 'TH')
 		return;
-	else sortirovkaGrid(point.target.cellIndex, point.target.getAtribute('data-type'));
+	else sortirovkaGrid(point.target.cellIndex, point.target.getAttribute('data-type'));
 };
 
 function sortirovkaGrid(colNum, type){
-	let tbody = grid.getElementByTagName('tbody')[0];
+	let tbody = grid.getElementsByTagName('tbody')[0];
 	let rowsArray = [].slice.call(tbody.rows);
 	let compare;
 
@@ -109,15 +109,15 @@ function sortirovkaGrid(colNum, type){
           };
           break;
       }
-      rowsArray.short(compare);
+      rowsArray.sort(compare);
       grid.removeChild(tbody);
       for (var i = 0; i < rowsArray.length; i++) {
       	tbody.appendChild(rowsArray[i]);
       }
       grid.appendChild(tbody);
 }
-*/
 
+/*
 //Задача 4
 let cells;
 cells = prompt("Задайте размер игрового поля N x N - введите N", );
@@ -165,3 +165,4 @@ function obrabotka(box){
 	console.log(index)
 	
 }
+*/
