@@ -1,7 +1,8 @@
-class apple{
+class Apple{
 	constructor(name){
 		let garden_age = 0
-		this._age = this.startAge(1,31) + garden_age;
+		this._appleName = name
+		this._age =  this.randomizer(1,31) + garden_age;
 		this._color = this.color(this._age);
 		this._size = this.size(this._color);
 		this._GB = this.GB(this._age);
@@ -13,10 +14,7 @@ class apple{
 	get gAppleAge(){
 		return this._age
 	}
-
-
-
-	startAge(min,max){
+	randomizer(min,max){
 	return Math.round(Math.random() * (max - min) + min);
 	}
 	color(age){
@@ -46,28 +44,14 @@ class apple{
 				if((Math.round(age*Math.random()) < 18)){
 					return "На ветке"
 				}else return "На земле"
-
+			}else if (age < 28){
+				return 'На ветке'
 			}else if (age === 31){
 				return "На земле"
-			}
 		}else return "На земле"
 	}
-
-
-
+}
 }
 
 
 
-/*
-Яблоки должны иметь определяться: 
--возрастом 
--цветом 
--размером 
--флаг испорченности (0 - свежее, 1 - испорченное) 
--флаг упавшего с дерева (0 - на дереве, 1 - упало) 
-
-Яблоки имею методы: 
--упасть с дерева 
--испортиться 
-*/
