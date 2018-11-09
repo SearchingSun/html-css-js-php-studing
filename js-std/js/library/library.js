@@ -1,67 +1,30 @@
 class skaf{
 	constructor(limit){
 		this._limit = limit;
-		this._bookName = name;
-		this._Knig = 0;
-		this._libName = "";
+		this._knigi = [];
 	};
-	set sLimitBook(_limit){
-		sLimitBook = limit
-	};
-	set sQuantBook(_Knig){
-		sQuantBook = _Knig
-	};
-	set sNameBook(_bookName){
-		sNameBook = _bookName
-	};
-
-	get gLimitBook(){
-		return this._limit
-	};
-	get gQuantBook(){
-		return this._Knig
-	};
-	get gBookName(){
-		return this._bookName
-	};
-
-	checkEnoughSpace(quan) {
-        return this._limit  >= quan + this._Knig;
-    };
-    checkBalance (book, quan) {
-        if ((this._Knig - quan) >= 0){
-            return true;
-        }else {
-            return false;
-        }
-    };
-    putB (book, quan) {
-        if (this.checkEnoughSpace(quan)) {
-            this._Knig += quan;
-            this._libName += "  " + book.bookName();
-            console.log('Книга ' +  book.bookName() + ' помещена в библиотеку, в количестве: ' + quan + ' шт.');
-        }else {
-            alert('Лимит превышен');
-        }
-
-    };    
-	getB (book, quan) {
-        if (this.checkBalance(book, quan)){
-            this._Knig -= quan;
-            console.log('Книгу ' + book.bookName() + ' забрали из библиотеки, в количестве: ' + quan + ' шт.');
-        }
-    }
-
-
+	putB(book, quant){
+		if (this._knigi.length === 0){
+			this._knigi[0] = book
+			this._knigi[0].bookChislo(quant)
+		}else{
+		for (let k = 0; k < this._knigi.length; k++) {
+		if (this._knigi[k]._bookName === book._bookName){
+		this._knigi[k].bookChislo(quant)
+		}else if (this._knigi[k]._bookName != book._bookName){
+		 	this._knigi[this._knigi.length] = book
+		}
+	}
+}
+}
 }
 
 
 
-
 // Сделать библиотеку, которая ведет учет книг. 
-// Должно быть как минимум две функции-конструктора: Book и Library. 
-// Library имеет два метода: put(book, quantity) и get( book, quantity).
-//  Каждой книге в библиотеке соответствует счетчик, показывающий количество
-//   хранящихся книг, при добавлении книги - счетчик увеличивается, при извлечении 
-//   - уменьшается на число quantity. 
-// Библиотека хранит ограниченное число книг. 
+// Должно быть как минимум две функции-конструктора: 
+// Book и Library. Library имеет два метода: put(book, quantity) 
+// и get( book, quantity). Каждой книге в библиотеке соответствует счетчик, 
+// показывающий количество хранящихся книг, при добавлении книги - счетчик увеличивается, 
+// при извлечении - уменьшается на число quantity. 
+// Библиотека хранит ограниченное число книг.
