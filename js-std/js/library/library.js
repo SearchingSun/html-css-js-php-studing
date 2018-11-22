@@ -5,14 +5,19 @@ class skaf{
 	};
 	putB(book, quant){
 		if (this._knigi.length === 0){
-			this._knigi[0] = book
+			this._knigi[0] = book;
 			this._knigi[0].bookChislo(quant)
 		}else{
-		for (let k = 0; k < this._knigi.length; k++) {
-		if (this._knigi[k]._bookName === book._bookName){
-		this._knigi[k].bookChislo(quant)
-		}else if (this._knigi[k]._bookName != book._bookName){
-		 	this._knigi[this._knigi.length] = book
+			for (let k = 0; k < this._knigi.length; k++) {
+				if (this._knigi[k]._bookName === book._bookName){
+					this._knigi[k].bookChislo(quant);
+					console.log("quant");
+					return
+				}else if (this._knigi[k]._bookName != book._bookName && this._knigi[k] === this._knigi[this._knigi.length-1]) {
+		 			this._knigi[this._knigi.length] = book;
+		 			this._knigi[this._knigi.length-1].bookChislo(quant);
+		 			console.log(quant);
+		 			return
 		}
 	}
 }

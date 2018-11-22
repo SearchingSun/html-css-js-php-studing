@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/validation.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/indStyle.css">
@@ -15,18 +16,18 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-xxl navbar-light" style="background-color: orange">
-        <a class="navbar-brand" href="main.html"><img class="img" src="https://fontmeme.com/permalink/181003/5f59850a5daeb01dc82adb3b2756483e.png" alt="indiana-jones-font" border="0"></a>
+        <a class="navbar-brand" href="#"><img class="img" src="https://fontmeme.com/permalink/181003/5f59850a5daeb01dc82adb3b2756483e.png" alt="indiana-jones-font" border="0"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="main.html">Главная <span class="sr-only">(current)</span></a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Кино</a>
+                    <a class="nav-link" href="films.html">Кино</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="serial.html">Сериал</a>
@@ -70,7 +71,7 @@
                             <button type="submit" class="btn btn-primary">Войти</button>
                         </form>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="registration.html">Первый раз? Зарегистрироваться!</a>
+                        <a class="dropdown-item" href="#">Первый раз? Зарегистрироваться!</a>
                         <a class="dropdown-item" href="#">Забыли пароль?</a>
                     </div>
                 </li>
@@ -82,54 +83,68 @@
         </div>
     </nav>
 </header>
-  <div class="background">
-	<div class="container">
-        <div class="flex-container border-0">
-          <div class="flex-m-1 flex-1 row-container border-2 margin-1 margin-2">
-        <div class="flex-1 row-container align">
-          <a href="cinema/kovcheg.html">
-        <img class="film-img" src="../pictures/kovcheg.jpg">
-      </a>
-        </div>
-        <div class="flex-1 row-container ">  
-        Знаменитый профессор истории и искатель приключений получает специальное задание от правительства США – найти утерянный Ковчег. Джонс еще не подозревает, что это же поручение получили приспешники Гитлера. В одиночку мужчине придется противостоять немецкой армии, чтобы доставить древнюю реликвию в США.
-        </div>
-      </div>
-      <div class="flex-m-1 flex-1 row-container border-2">
-        <div class="flex-1 row-container align">
-          <a href="cinema/hram.html">
-        <img class="film-img" src="../pictures/hram.jpg">
-      </a>
-        </div>
-        <div class="flex-1 row-container ">  
-        В самом центре Гималаев находится некий храм Судьбы. По мнению профессора Джонса, служители оного охраняют знаменитый священный жезл. По легенде этот жезл наделяет своего хозяина могучей силой. Герою предстоит выкрасть реликвию и доставить в музей США.
-        </div>
-      </div>
-        </div>
-        <div class="flex-container border-1">
-          <div class="flex-m-1 flex-1 row-container border-2 margin-1 margin-2">
-        <div class="flex-1 row-container align">
-          <a href="cinema/pohod.html">
-        <img class="film-img" src="../pictures/pohod.jpg">
-      </a>
-        </div>
-        <div class="flex-1 row-container">  
-        Джонс узнает, что совсем недавно была найдена чаша – Священный Грааль. Всем кто выпьет из нее, она дарует вечную молодость. Сейчас артефакт находится у Гитлера, а значит, мужчине вновь предстоит встретиться с армией фашистов.
-        </div>
-      </div>
-        <div class="flex-m-1 flex-1 row-container border-2">
-        <div class="flex-1 row-container align">
-          <a href="cinema/cherep.html">
-        <img class="film-img" src="../pictures/cherep.jpg">
-      </a>
-        </div>
-        <div class="flex-1 row-container ">  
-        В этот раз герою сулит самое сложное задание. Существует легенда о хрустальном черепе, с помощью которого можно управлять волей людей. Этот магический предмет и предстоит отыскать профессору вместе с родным сыном, таким же неугомонным парнем.
-        </div>
-        </div>
-      </div>
-    </div>
-    </div>
+<div class="background">
+    <div id="smoke" class="container">
+        <div class="text">
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Имя</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Имя" value="" required>
+                        <div class="valid-feedback">
+                            Сойдёт!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom02">Фамилия</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Фамилия" value="" required>
+                        <div class="valid-feedback">
+                            Сойдёт!
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom03">Логин</label>
+                        <input type="text" class="form-control" id="validationCustom03" placeholder="Логин" value="" required>
+                        <div class="valid-feedback">
+                            Сойдёт!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail1">Email адрес</label>
+                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
+                    <small id="emailHelp" class="form-text text-muted">Мы не передаём вашу личную информацию кому-нибудь ещё.</small>
+                    <div class="valid-feedback">
+                        Хорошо!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword1">Пароль</label>
+                    <input type="password" class="form-control" id="InputPassword1" placeholder="Пароль">
+                    <div class="valid-feedback">
+                        Супер!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Согласен с передачей и обработкой данных этой формы
+                        </label>
+                        <div class="invalid-feedback">
+                            Необходимо согласиться на обработку формы перед отправкой.
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Отправить данные</button>
+            </form>
 
+
+        </div>
+    </div>
+</div>
+<footer>
+
+</footer>
 </body>
 </html>
