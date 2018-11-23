@@ -88,55 +88,74 @@
         <div class="text">
             <form class="needs-validation" novalidate>
                 <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom01">Имя</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Имя" value="" required>
-                        <div class="valid-feedback">
-                            Сойдёт!
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip01">Имя</label>
+                        <input type="text" class="form-control" id="validationTooltip01" placeholder="Имя" value="" required>
+                        <div class="valid-tooltip">
+                            Ура, у вас есть имя!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Вы не ввели ваше имя.
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom02">Фамилия</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Фамилия" value="" required>
-                        <div class="valid-feedback">
-                            Сойдёт!
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip02">Фамилия</label>
+                        <input type="text" class="form-control" id="validationTooltip02" placeholder="Фамилия" value="" required>
+                        <div class="valid-tooltip">
+                            И даже фамилия!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Вы не ввели вашу фамилию.
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationCustom03">Логин</label>
-                        <input type="text" class="form-control" id="validationCustom03" placeholder="Логин" value="" required>
-                        <div class="valid-feedback">
-                            Сойдёт!
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip03">Логин</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="validationTooltipUsernamePrepend"></span>
+                            </div>
+                            <input type="text" class="form-control" id="validationTooltip03" placeholder="Имя пользователя" aria-describedby="validationTooltipUsernamePrepend" required>
+                            <div class="valid-tooltip">
+                                Отличный уникальный логин! =)
+                            </div>
+                            <div class="invalid-tooltip">
+                                Пожалуйста введите уникальный и неповторимый логин.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip04">Почта</label>
+                        <input type="email" class="form-control" id="validationTooltip04" placeholder="E-mail" value="" required>
+                        <div class="valid-tooltip">
+                            Ух-ты, да это-же почта!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Введите ваш E-mail...
+                        </div>
+                    </div>
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip05">Пароль</label>
+                        <input type="password" class="form-control" id="validationTooltip05" placeholder="Пароль, пожалуйста" value="" required>
+                        <div class="valid-tooltip">
+                            Юху, вы осилили пароль!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Пароль, будьте столь любезны!
+                        </div>
+                    </div>
+                    <div class="offset-1 col-md-6 mb-4">
+                        <label for="validationTooltip06">Пароль</label>
+                        <input type="password" class="form-control" id="validationTooltip06" placeholder="Повторите пароль, пожалуйста" value="" required>
+                        <div class="valid-tooltip">
+                            Чудеса, вы снова осилили пароль!
+                        </div>
+                        <div class="invalid-tooltip">
+                            Пароль. Повторить! Повторить! Повторить!
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="InputEmail1">Email адрес</label>
-                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
-                    <small id="emailHelp" class="form-text text-muted">Мы не передаём вашу личную информацию кому-нибудь ещё.</small>
-                    <div class="valid-feedback">
-                        Хорошо!
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="InputPassword1">Пароль</label>
-                    <input type="password" class="form-control" id="InputPassword1" placeholder="Пароль">
-                    <div class="valid-feedback">
-                        Супер!
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                            Согласен с передачей и обработкой данных этой формы
-                        </label>
-                        <div class="invalid-feedback">
-                            Необходимо согласиться на обработку формы перед отправкой.
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-primary" type="submit">Отправить данные</button>
+
+                <button class="btn btn-primary offset-1" type="submit">Зарегистрироваться</button>
             </form>
 
 

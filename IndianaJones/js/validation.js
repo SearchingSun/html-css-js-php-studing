@@ -10,6 +10,21 @@
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                }else {
+                    var arrey = [];
+                    for( var i = 1; i < 7; i++ ){
+                        var pos = "validationTooltip0" + i;
+                        var val = document.getElementById(pos).value;
+                        arrey[i-1] = val
+                    }
+                    var ob = {};
+                    ob.fstName = arrey[0];
+                    ob.secName = arrey[1];
+                    ob.login = arrey[2];
+                    ob.Email = arrey[3];
+                    ob.pwd = arrey[4];
+                    ob.pwd2 = arrey[5];
+                    console.log(ob);
                 }
                 form.classList.add('was-validated');
             }, false);
