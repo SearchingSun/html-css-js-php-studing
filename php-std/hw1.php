@@ -91,24 +91,14 @@ $array = array(
 <?php
 function perebor($array){
     $get = $_GET;
-    foreach ($array as $value){
-        var_dump($value);
-        var_dump($get);
-        var_dump((string)$value["id"]);
-        if ($get == (string)$value["id"]){
-            return $value;
-        }else if ($get == (string)$value["count"]){
-            return $value;
+    foreach ($array as $key=>$value){
+        if ($get["parametr"] == (string)$value["id"]){
+            return "Ключ: " . $key . PHP_EOL . "Значение id = " . $value["id"] . PHP_EOL . "Стоимость = " . $value["count"];
+        }else if ($get["parametr"] == (string)$value["count"]){
+            return "Ключ: " . $key . PHP_EOL . "Значение id = " . $value["id"] . PHP_EOL . "Стоимость = " . $value["count"];
         }
     }
 }
-
-$l = 2;
-if ($l == "2"){
-    var_dump(ravno);
-}
-
-
 var_dump(perebor($array));
 ?>
 
