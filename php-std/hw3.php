@@ -32,26 +32,20 @@ $post = $_POST;
 $file = 'URLs.txt';
 
 $urls = file('URLs.txt');
-var_dump($urls);
 
 
 
-// Охота перебором массива проверку сделать, но всё не могу вывести из него значение.
-$i = 0;
-foreach($urls as $value){
-    if ($value === $post['place']) {
-        return $i=1;
+function getSmth($urls, $post){
+    foreach($urls as $value){
+        if ($value === $post['place'] . PHP_EOL) {
+            return "x";
+        }
     }
-};
-
-
-
-
-
-
-var_dump($i);
-writeFile($file, $post['place'] . PHP_EOL);
-
+}
+if (getSmth($urls, $post) === "x"){
+}else {
+    writeFile($file, $post['place'] . PHP_EOL);
+}
 
 function writeFile($file, $data) {
     $fp = fopen($file, 'a'); // w
@@ -59,6 +53,7 @@ function writeFile($file, $data) {
     fclose($fp);
 }
 
+var_dump($urls);
 
 ?>
 
