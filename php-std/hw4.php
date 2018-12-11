@@ -13,7 +13,8 @@ $name = $files['picture']['name'];
 $tmp_name = $files['picture']['tmp_name'];
 // md5();
 //md5_file();
-move_uploaded_file($tmp_name, "serverFileBase/");
+$x = $files['file']['name'[0]];
+move_uploaded_file($files['file']['tmp_name'[0]], "serverFileBase/$x");
 
 
 
