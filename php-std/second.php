@@ -1,11 +1,14 @@
 <?php
 session_start();
 
-
 function is_session(){
     return isset($_SESSION['login']);
 }
-
+//if ($_SESSION['login'] == false){
+//    header('Location:http://php/hw4_2.php');
+//    exit;
+//}
+var_dump($_SESSION['login']);
 
 ?>
 <?php if(is_session()): ?>
@@ -16,4 +19,4 @@ function is_session(){
 
 <?php endif;?>
 
-<li><a href="first.php">First page</a></li>
+<li><a href="hw4_2.php">First page</a></li>
