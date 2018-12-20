@@ -4,10 +4,12 @@ class Korzina
     public $tovari = array();
 
     public function addTovar($tovar){
-    array_push($tovari, $tovar);
-
+    array_push($this->tovari, $tovar);
     }
-
+    public function removeTovar($tovar){
+        $thp = array_search($tovar, $this->tovari);
+        array_splice($this->tovari, $thp, 1);
+    }
 
 
 }

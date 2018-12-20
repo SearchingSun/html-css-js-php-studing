@@ -73,6 +73,9 @@ $data = getCSV();
 //   Пароли\логины
 //   123\qwe
 //   12345\qwerty
+
+
+
 function auth($login, $pwd, $data) {
     if (!$login || !$pwd) { return false; }
 
